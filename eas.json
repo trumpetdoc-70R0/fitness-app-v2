@@ -1,0 +1,71 @@
+{
+  "cli": {
+    "version": ">= 15.0.0",
+    "requireCommit": false,
+    "appVersionSource": "local"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "ndk": "27.1.12297006",
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "env": {
+        "EAS_BUILD_NO_EXPO_GO_WARNING": "true",
+        "ORG_GRADLE_PROJECT_minSdkVersion": "24"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "ndk": "27.1.12297006",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "env": {
+        "EAS_BUILD_NO_EXPO_GO_WARNING": "true",
+        "ORG_GRADLE_PROJECT_minSdkVersion": "24"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "ndk": "27.1.12297006"
+      },
+      "env": {
+        "EAS_BUILD_NO_EXPO_GO_WARNING": "true",
+        "ORG_GRADLE_PROJECT_minSdkVersion": "24"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "trumpetdoc@gmail.com",
+        "ascAppId": "6761559734",
+        "ascApiKeyPath": "./asc-api-key.p8",
+        "ascApiKeyIssuerId": "320f88c8-ce0f-4452-914b-3723904645b5",
+        "ascApiKeyId": "AG64VMKF6T"
+      }
+    },
+    "preview": {
+      "ios": {
+        "appleId": "trumpetdoc@gmail.com",
+        "ascAppId": "6761559734",
+        "ascApiKeyPath": "./asc-api-key.p8",
+        "ascApiKeyIssuerId": "320f88c8-ce0f-4452-914b-3723904645b5",
+        "ascApiKeyId": "AG64VMKF6T"
+      }
+    },
+    "development": {
+      "ios": {
+        "appleId": "trumpetdoc@gmail.com",
+        "ascAppId": "6761559734",
+        "ascApiKeyPath": "./asc-api-key.p8",
+        "ascApiKeyIssuerId": "320f88c8-ce0f-4452-914b-3723904645b5",
+        "ascApiKeyId": "AG64VMKF6T"
+      }
+    }
+  }
+}

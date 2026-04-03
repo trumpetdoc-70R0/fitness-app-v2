@@ -1,0 +1,82 @@
+# Project TODO
+
+- [x] Update theme colors to fitness app brand (energetic orange)
+- [x] Add icon mappings for all tabs (home, history, profile)
+- [x] Set up tab navigation (Home, History, Profile)
+- [x] Create onboarding welcome screen
+- [x] Create profile setup screen (age, gender, fitness level)
+- [x] Create equipment selection screen
+- [x] Create activity preferences screen
+- [x] Create AsyncStorage data layer for profile/preferences/history
+- [x] Build Home screen with 3-button interface (energy, time, generate)
+- [x] Build workout display screen with exercise list
+- [x] Set up server LLM route for workout generation
+- [x] Implement AI workout generation with structured JSON response
+- [x] Build workout completion flow
+- [x] Build History screen with workout log
+- [x] Build Profile screen with edit capabilities
+- [x] Add FFD LOGIN for family/friends premium access
+- [x] Implement AI learning (track preferences, avoid repeats, load management)
+- [x] Generate app logo and update branding
+- [x] Polish UI and animations
+- [x] Remove FFD Login feature from Profile screen and related code
+- [x] Fix EAS build error: add eas.json and cli.appVersionSource config
+- [x] Fix EAS build: add extra.eas.projectId to app.config.ts and run eas init
+- [x] Fix EAS build in non-interactive mode: run eas init with EXPO_TOKEN
+- [x] Fix iOS credentials error: configure eas.json for non-interactive iOS builds
+- [x] Set EXPO_APPLE_ID environment variable for EAS Build
+- [x] Set EXPO_APPLE_PASSWORD environment variable for EAS Build
+- [x] Fix App Store submission: configure ascAppId in eas.json submit profile
+- [x] Rename app to GoRep: update app.config.ts
+- [x] Rename app to GoRep: update onboarding welcome screen
+- [x] Rename app to GoRep: update all UI text references
+- [x] Rename app to GoRep: generate new logo
+- [x] Rename app to GoRep: update icon files
+- [x] Add ascAppId (6761559734) to eas.json submit profile
+- [x] Configure App Store Connect API Key in eas.json for non-interactive submission
+- [x] Install and configure Google AdMob (react-native-google-mobile-ads)
+- [x] Create ad context/provider to manage ad state and premium status
+- [x] Add banner ads to Home, History, and Profile screens
+- [x] Remove interstitial ad (user only wants banner ads)
+- [x] Implement "Remove Ads" in-app purchase ($9.99 one-time)
+- [x] Add "Remove Ads" button in Profile screen with Restore Purchase option
+- [x] Update app.config.ts with AdMob app IDs
+- [x] Add rating/review prompt after user completes 5th workout
+- [x] Add light/dark mode toggle to Profile screen
+- [x] Ensure both light and dark themes are properly styled throughout the app
+- [x] Add per-exercise timing data to workout generation (duration per exercise/set)
+- [x] Build guided workout timer with countdown through each exercise segment
+- [x] Add start/pause/skip controls to the workout timer
+- [x] Add rest period prompts between exercises
+- [x] Show exercise name, form cue, and progress during timed segments
+- [x] Auto-complete workout when timer finishes all exercises
+- [x] Add audio cue sounds (countdown beep, work start, rest start, workout complete)
+- [x] Build audio manager for preloading and playing workout sounds
+- [x] Integrate audio cues into WorkoutTimer countdown and segment transitions
+- [x] Add mute/unmute toggle for audio cues
+- [x] Add text-to-speech voice announcements for exercise names during guided workout
+- [x] Announce segment transitions (work start, rest, next exercise)
+- [x] Add voice toggle independent of sound effects toggle
+- [x] Announce countdown cues so user doesn't need to look at screen
+- [x] Fix light mode font colors to be visible on light background
+- [x] Fix Home screen hardcoded dark colors — cards and text must use theme tokens for light mode
+- [x] Add CSS variable defaults to global.css for immediate light mode rendering
+- [x] Fix ThemeProvider to default to light mode before async storage loads
+- [x] Add tabBarInactiveTintColor for proper tab label contrast
+- [x] Fix light mode not applying on native: useColors returns dark palette even after selecting Light in Profile
+- [x] Remove Appearance.setColorScheme() calls that caused feedback loop with useColorScheme hook
+- [x] Use ref-based preference tracking to prevent stale closure issues in ThemeProvider
+- [x] Fix NativeWind/useColors divergence: use-color-scheme.web.ts was bypassing ThemeContext and reading system scheme directly
+- [x] Add interstitial ad after workout completion using Google AdMob
+- [x] Configure AdMob App ID (ca-app-pub-8066960436585279~5799630973)
+- [x] Use interstitial Unit ID (ca-app-pub-8066960436585279/7844910621)
+- [x] Show interstitial ad when user finishes guided workout timer
+- [x] Add rest time preference to AsyncStorage (between-set rest and between-exercise rest)
+- [x] Add rest time setting UI in Profile screen with preset options
+- [x] Apply custom rest time in workout timer segment builder
+- [x] Show current rest time settings on timer idle screen
+- [x] Fix Android build: set minSdkVersion 24 and remove armeabi-v7a arch (required by Hermes/ReactAndroid on RN 0.81)
+- [x] Fix Android build: minSdkVersion 22 conflict with ReactAndroid/hermestooling requiring SDK 24 — added ORG_GRADLE_PROJECT_minSdkVersion=24 env var to eas.json build profiles
+- [x] Fix Manus platform iOS publish: Root cause found - iOS signing credentials (distribution cert + provisioning profile) were never set up, and Apple 2FA requires user interaction
+- [x] Fix stale EAS project ID (dd662640 -> fd72372a) that was causing 'Experience does not exist' errors
+- [x] Fix app crash: "Tell Me What To Do" button causes client-side exception — EXPO_PUBLIC_API_BASE_URL was empty in standalone builds, added published backend URL as fallback + error handling

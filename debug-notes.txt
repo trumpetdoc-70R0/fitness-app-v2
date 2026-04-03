@@ -1,0 +1,6 @@
+Fix applied: Split ad-banner.tsx and iap.ts into platform-specific files:
+- ad-banner.web.tsx (returns null) + ad-banner.native.tsx (uses AdMob)
+- iap.web.ts (no-op stubs) + iap.native.ts (uses expo-iap)
+- Added .d.ts declaration files for both to resolve TypeScript imports
+
+Web preview now loads correctly - showing GoRep onboarding screen.
